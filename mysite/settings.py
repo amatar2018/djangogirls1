@@ -83,7 +83,8 @@ ROOT_URLCONF = 'mysite.urls'
 # Update database configuration with $DATABASE_URL.
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-DATABASES = { 'default': dj_database_url.config() }
+DATABASES['default'] = dj_database_url.config()
+
 
 
 TEMPLATES = [
@@ -108,12 +109,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+
 
 DATABASES = {
     'default': {
