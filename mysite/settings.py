@@ -25,7 +25,7 @@ SECRET_KEY = 'cgw($c28*n3)mx(gacbx=fv$4&glb%z9cvb89#jlc0+zwi$7(v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
@@ -81,10 +81,9 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'mysite.urls'
 
 # Update database configuration with $DATABASE_URL.
+
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-DATABASES['default'] = dj_database_url.config()
-
 
 
 TEMPLATES = [
