@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-import dj_database_url
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -82,10 +82,12 @@ ROOT_URLCONF = 'mysite.urls'
 
 # Update database configuration with $DATABASE_URL.
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES = { 'default': dj_database_url.config() }
-
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 TEMPLATES = [
@@ -112,16 +114,6 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ddvja8rpvbgsi6',
-        'USER': 'husfrvwpuxlkcj',
-        'PASSWORD': '2570bc147415a5d52bec8bf9473c313eb5ffbe6b5006808d5e325c58d413dc06',
-        'HOST': 'ec2-54-235-240-126.compute-1.amazonaws.com',
-        'PORT': '5432',
-    }
-}
 
 
 
