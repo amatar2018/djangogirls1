@@ -157,7 +157,7 @@ USE_L10N = True
 
 USE_TZ = True
 TIME_ZONE = 'Europe/Berlin'
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com','djangogirlsblog201812.herokuapp.com']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
