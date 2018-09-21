@@ -25,7 +25,7 @@ SECRET_KEY = 'cgw($c28*n3)mx(gacbx=fv$4&glb%z9cvb89#jlc0+zwi$7(v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com','djangogirlsww.herokuapp.com']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
